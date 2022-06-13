@@ -74,15 +74,22 @@
 				</div>
 
 				<section id="product">
-					<form>
+					<form class="" method="POST" action="">
 					<div class="form-group">
-					<label for="exampleInputEmail1">Input Berita</label>
-					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Berita">
+					<label for="text">Input Berita</label>
+					<input type="text" class="form-control" id="text" placeholder="Masukan Berita" name="input_news" required>
 				</div>
 				<button type="submit" class="btn btn-primary">Analysis</button>
-				    <small id="emailHelp" class="form-text text-muted">Hasil Analysis</small>
-
+				<br>
 				</form>
+
+			{% if result is defined %}
+            <div class="prediction-result">
+                <h2 class="text">Hasil Analisis</h2>
+			<img class="my-3" src="assets/images/banner.jpg" alt="fake_news">
+                <h1>{{result}}</h1>
+            </div>
+            {% endif %}
 				</section>
 
 				<br>
